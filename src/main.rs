@@ -1,4 +1,4 @@
-use minigrep::Config;
+use minigrep_yuma::Config;
 use std::env;
 use std::process;
 
@@ -8,7 +8,7 @@ fn main() {
         process::exit(1);
     });
 
-    if let Err(e) = minigrep::run(config) {
+    if let Err(e) = minigrep_yuma::run(config) {
         eprintln!("Application error: {e}");
         process::exit(1);
     }
